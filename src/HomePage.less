@@ -1,0 +1,114 @@
+:global {
+    * {
+        padding: 0px;
+        margin: 0px;
+        
+    }
+
+    .content-page-all {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Icon-Music{
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:3;
+            width: 40px;
+            height: 40px;
+        }
+        .video-box {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-color: #C1CFF7;
+            /*进行视频裁剪*/
+            overflow: hidden;
+            z-index: 0;
+        }
+        .video-box .video-background {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /*保证视频内容始终居中*/
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            /*保证视频充满屏幕*/
+            object-fit: cover;
+            min-height: 800px;
+
+        }
+
+        .content-page-center {
+            position: absolute;
+            width: 60%;
+            height: 100%;
+            z-index: 2;
+            
+            .content-page-center-top{
+                width: 100%;
+                border-radius:10px;
+                height: 68%;
+                border: 1px solid #c0b9ab;
+                margin-top: 12%;
+                background-color: antiquewhite;
+                opacity: 0.8;
+                .content-page-center-top-left{
+
+                    float: left;
+                    margin-top: 5%;
+                    margin-left: 5%;
+                    width: 50%;
+                    height: 95%;
+                    .content-page-center-output{
+                        margin-top: 5%;
+                        width: 100%;
+                        height: 10%;
+                        .content-page-center-output-audio{
+                            width: 40%;
+                            height: 25%;
+                        }
+                    }
+                }
+                .content-page-center-top-right{
+                    border-left: 1px solid #c0b9ab;
+                    float: right;
+                    width: 40%;
+                    height: 100%;
+                }
+
+            }
+            .content-page-center-bottom{
+                margin-top: 2%;
+                width: 100%;
+                height: 10%;
+                opacity: 0.8;
+                .contributors-list{
+                    width: 100%;
+                    height: 60%;
+                    justify-content: center;
+                    display: flex;
+                    list-style: none;
+                    flex-flow: wrap;
+                    .contributors-list-image{
+                        margin-left: 5px;
+                        width: 50px;
+                        height: 50px;
+                        display: block;
+                    }
+                }
+                .success-message{
+
+                    width: 100%;
+                    height: 30%;
+                    justify-content: center;
+                    display: flex;
+                }
+            }
+
+        }
+    }
+}
